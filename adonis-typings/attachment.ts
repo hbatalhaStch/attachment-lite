@@ -73,6 +73,11 @@ declare module '@ioc:Adonis/Addons/AttachmentLite' {
     mimeType: string
 
     /**
+     * The file mimetype.
+     */
+    clientName: string
+
+    /**
      * "isLocal = true" means the instance is created locally
      * using the bodyparser file object
      */
