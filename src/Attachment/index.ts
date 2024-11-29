@@ -52,6 +52,7 @@ export class Attachment implements AttachmentContract {
       extname: file.extname!,
       mimeType: `${file.type}/${file.subtype}`,
       size: file.size!,
+      clientName: file.clientName,
     }
 
     return new Attachment(attributes, file)
@@ -117,6 +118,11 @@ export class Attachment implements AttachmentContract {
    * The file mimetype.
    */
   public mimeType = this.attributes.mimeType
+
+  /**
+   * The file clientName.
+   */
+  public clientName = this.attributes.clientName
 
   /**
    * "isLocal = true" means the instance is created locally
@@ -279,6 +285,7 @@ export class Attachment implements AttachmentContract {
       extname: this.extname,
       size: this.size,
       mimeType: this.mimeType,
+      clientName: this.clientName,
     }
   }
 
